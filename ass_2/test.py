@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 from scipy.integrate import solve_ivp
 
 # Given / constants
-ae    = 10e3            # [1/m]
 w     = 1e-3            # [m]
 h     = 1e-3            # [m]
 i_tot = 2000            # [A/m2]
@@ -11,6 +10,7 @@ nu    = 75e-6/60        # [m3/s]  (75 mL/min)
 F     = 96485           # [C/mol]
 ne    = 2
 kL    = 8e-5            # [m/s]
+ae    = 1/h             # [1/m]
 L     = 5.0             # [m]
 
 c_ref = 38.0            # [mol/m3] saturation concentration c* = cref
