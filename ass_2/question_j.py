@@ -28,13 +28,13 @@ def equation_i(y, x, params):
     ODE for the equation in question i. 
     
     Arg: 
-        params:         (lst): list of all the parameters required 
-            params = 
-        x               (int):
-        y               (int):
+        y               (int): independent spatial coordinate
+        x           (ndarray): dependent varialbe vecotor 
+        params:     (ndarray): list of all the parameters required 
+            params = ae, w, h, i_tot, nu, F, ne, kl, c_ref
 
-        returns: 
-
+    returns: 
+        [dCdy]      (ndarray): derivative which is to be integrated    
         """
 
     # unpack params
