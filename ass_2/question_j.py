@@ -41,7 +41,6 @@ def equation_i(y, x, params):
     ae, w, h, i_tot, nu, F, ne, kl, c_ref = params      
    
     C_bulk = x[0]
-    # FE = (F * ne * nu * co2_e)/ (w*L*i_tot)
     FE = (ne * F * kl * C_bulk)/(i_tot + ne*F*kl*c_ref)
 
     dCdy = -(ae * w * h) * ( FE * i_tot) / (nu * F * ne)
