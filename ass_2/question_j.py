@@ -8,7 +8,6 @@ From the techno-economic analysis, it follows that for the process to be profita
 j) Implement th equation from i.) with the equation for FE(y) in Python and plot the conversion and faradaic efficiency over the reactor length. 
 """
 
-ae    = 10e3            # [1/m] specific surface area
 w     = 1e-3            # [m]
 h     = 1e-3            # [m]
 i_tot = 2000            # [A/m2]
@@ -17,6 +16,7 @@ F     = 96485           # [C/mol]
 ne    = 2
 kl    = 8e-5            # [m/s]
 c_ref = 38              # [mol/m3]  
+ae    = 1/h            # [1/m] specific surface area
 L     =  5              # [m]    the height of the reactor (y)
 
 
@@ -72,6 +72,8 @@ ax[1].set_xlabel("Reactor length y [m]")
 ax[1].set_ylabel("Faradaic efficiency FE(y)")
 ax[1].set_ylim(0, 1.05)
 ax[1].grid(True)
+
+plt.suptitle("Conversion and FE over Reactor Length", weight = 'bold')
 
 plt.tight_layout()
 plt.show()
