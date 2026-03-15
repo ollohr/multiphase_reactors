@@ -41,9 +41,9 @@ C0_NaOH = 0.04 #mol/l
 FCO2 = 70 #l/min
 
 # concentration of CO2 in gas phase --> assumption: ideal gas 
-C0_CO2 = (0.3*101325)/(R*T)/1000 #mol/l                     ######################### change this weird as 
-
+C0_CO2 = (0.3*101325)/(R*T*1000)
 print(C0_CO2)
+
 # physical properties
 ug = 6.6e-4  #m/s
 kla = 0.467*ug**0.82  #1/s
